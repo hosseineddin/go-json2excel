@@ -74,7 +74,7 @@ func (x *xlsxExporter) WriteRow(row []interface{}) error {
 	return nil
 }
 
-func (x *xlsxExporter) WriteTo(w io.Writer) error {
+func (x *xlsxExporter) ExportTo(w io.Writer) error {
 	if err := x.streamWriter.Flush(); err != nil {
 		return err
 	}

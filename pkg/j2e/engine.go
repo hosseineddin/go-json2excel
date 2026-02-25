@@ -128,5 +128,5 @@ func (e *Engine) Execute() error {
 	default:
 	}
 
-	return exporter.WriteTo(e.outWriter)
+	return exporter.ExportTo(e.outWriter)
 }

@@ -9,7 +9,7 @@ import (
 type Exporter interface {
 	Init(headers []string) error
 	WriteRow(row []interface{}) error
-	WriteTo(w io.Writer) error
+	ExportTo(w io.Writer) error
 }
 
 // Format defines the requested output extension.

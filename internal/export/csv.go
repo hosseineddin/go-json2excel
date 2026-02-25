@@ -32,7 +32,7 @@ func (c *csvExporter) WriteRow(row []interface{}) error {
 	return c.writer.Write(stringRow)
 }
 
-func (c *csvExporter) WriteTo(w io.Writer) error {
+func (c *csvExporter) ExportTo(w io.Writer) error {
 	c.writer.Flush()
 	if err := c.writer.Error(); err != nil {
 		return err
